@@ -4,12 +4,16 @@
 ```sh
 sudo apt install -y neovim git tmuxp fzf fasd vifm powerline ripgrep bat stow chafa \
 fortune cowsay lolcat sl cmatrix &&
+# autoapply
+ls ~/.config/base16-shell/scripts/|rev|cut -d. -f2-|rev|grep -v \\-light|fzf --bind 'enter:execute(source ~/.config/base16-shell/scripts/{}.sh)' --height=10 --border
 
 # colors
 ln -s `which batcat` ~/.local/bin/bat
 git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell &&
 (
 cd ~/.config/base16-shell &&
+crazy="greenscreen heetch"
+vimdiff="default-light heetch-light "
 (cd scripts/best/crazy && for s in $crazy; do ln -s ../../base16-$s.sh .;done) &&
 (cd scripts/best/light && for s in $light; do ln -s ../../base16-$s.sh .;done) &&
 (cd scripts/best/dark && for s in $dark; do ln -s ../../base16-$s.sh .;done)
