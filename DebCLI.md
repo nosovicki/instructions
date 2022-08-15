@@ -46,6 +46,16 @@ fi
 END
 
 ```
+## Neovim
+```sh
+# install init.vim
+stow nvim
+# Download vim-plug
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+# Install plugins
+nvim --headless +PlugInstall +qa
+nvim +UpdateRemotePlugins +qa
 
 ## Tmux
 ```sh
