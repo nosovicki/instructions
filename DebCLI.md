@@ -57,6 +57,8 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 nvim --headless +PlugInstall +qa
 nvim +UpdateRemotePlugins +qa
 
+```
+
 ## Tmux
 ```sh
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm &&
