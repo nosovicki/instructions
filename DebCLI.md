@@ -2,7 +2,7 @@
 
 ## Общее
 ```sh
-sudo apt install -y neovim git tmuxp fzf fasd vifm powerline ripgrep bat stow chafa \
+sudo apt install -y neovim git tmuxp fzf fasd vifm powerline ripgrep bat stow chafa thefuck \
 fortune cowsay lolcat sl cmatrix &&
 # autoapply
 ls ~/.config/base16-shell/scripts/|rev|cut -d. -f2-|rev|grep -v \\-light|fzf --bind 'enter:execute(source ~/.config/base16-shell/scripts/{}.sh)' --height=10 --border
