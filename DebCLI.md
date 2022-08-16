@@ -5,6 +5,10 @@
 sudo apt install -y neovim git tmuxp fzf fasd vifm powerline ripgrep bat stow chafa thefuck console-terminus xfonts-terminus \
 fortune cowsay lolcat sl cmatrix &&
 
+# Font
+gsettings set org.gnome.desktop.interface monospace-font-name 'Terminus Medium 8'
+gconftool-2 --set /apps/gnome-terminal/profiles/Default/use_system_font --type=boolean false
+
 # colors
 ln -s `which batcat` ~/.local/bin/bat
 git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell &&
@@ -29,7 +33,6 @@ nvim +UpdateRemotePlugins +qa
 ## Tmux
 ```sh
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm &&
-(cat >> ~/.tmux.conf<<END
 cd ~/.dotfiles &&
 stow tmux
 ~/.tmux/plugins/tpm/bindings/install_plugins
