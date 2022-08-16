@@ -16,6 +16,11 @@ git clone https://github.com/nosovicki/dotfiles.git ~/.dotfiles &&
 cd ~/.dotfiles &&
 stow -v color
 
+#bash
+(test -f ~/.bashrc -a ! -L ~/.bashrc && mv -b ~/.bashrc ~/.bashrc.bak) &&
+cd ~/.dotfiles &&
+stow -v bash
+
 ```
 ## Neovim
 ```sh
