@@ -19,6 +19,8 @@ stow -v color
 ```
 ## Neovim
 ```sh
+# remove vim if installed
+apt autoremove vim
 # install init.vim
 stow nvim
 # Download vim-plug
