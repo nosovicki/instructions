@@ -2,7 +2,7 @@
 
 ## Общее
 ```sh
-sudo apt install -y neovim git tmuxp fzf fasd vifm powerline ripgrep bat stow chafa thefuck console-terminus xfonts-terminus \
+sudo apt install -y neovim git tmux fzf fasd vifm powerline ripgrep bat stow chafa thefuck console-terminus xfonts-terminus \
 fortune cowsay lolcat sl cmatrix &&
 
 # Font
