@@ -2,7 +2,7 @@
 
 ## Общее
 ```sh
-sudo apt install -y neovim git tmux fzf fasd vifm powerline ripgrep bat stow chafa thefuck console-terminus xfonts-terminus \
+sudo apt install -y neovim git tmux fzf fasd vifm powerline zsh ripgrep bat stow chafa thefuck console-terminus xfonts-terminus \
 fortune cowsay lolcat sl cmatrix &&
 
 # Font
@@ -40,31 +40,19 @@ stow tmux
 
 ## Zsh
 ```sh
-sudo apt install zsh powerline
-chsh -s $(which zsh)
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $HOME/.oh-my-zsh/custom/themes/powerlevel10k
-mkdir -p ~/.fonts
-cd ~/.fonts/
-for x in Regular Bold Italic Bold%20Italic; do wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20$x.ttf\;done
-cd -
-fc-cache -f -v
-gconftool-2 --set /apps/gnome-terminal/profiles/Default/font --type string "MesloLGS NF 10"
-gconftool-2 --set /apps/gnome-terminal/profiles/Default/use_system_font --type=boolean false
-sed -i 's/POWERLEVEL9K_DIR_BACKGROUND=.*$/POWERLEVEL9K_DIR_BACKGROUND=31/' ~/.p10k.zsh
-cd ~/.oh-my-zsh/custom/plugins
-git clone https://github.com/zsh-users/zsh-autosuggestions.git
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
-git clone https://github.com/unixorn/fzf-zsh-plugin.git
-cd -
-sed -i '/^plugins/s/)/ zsh-autosuggestions zsh-syntax-highlighting fzf-zsh-plugin)/' ~/.zshrc
-(cat >>~/.zshrc<<END
-if [ -f \$HOME/.rc ]; then
-  source \$HOME/.rc;
-fi
-END
-)
-
+rm -rf ~/.oh-my-zsh &&
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended &&
+cd ~/.oh-my-zsh/custom/plugins &&
+git clone https://github.com/zsh-users/zsh-autosuggestions.git &&
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git &&
+git clone https://github.com/unixorn/fzf-zsh-plugin.git &&
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $HOME/.oh-my-zsh/custom/themes/powerlevel10k &&
+(test -f ~/.zshrc -a ! -L ~/.zshrc && mv -b ~/.zshrc ~/.zshrc.bak) &&
+cd ~/.dotfiles &&
+stow -v zsh
+chsh -s `which zsh`
+zsh -ic 'p10k configure' &&
+zsh
 ```
 ## Sources
 Adapted from:
