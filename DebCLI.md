@@ -2,48 +2,15 @@
 
 ## Общее
 ```sh
-sudo apt install -y neovim git tmuxp fzf fasd vifm powerline ripgrep bat stow chafa thefuck \
+sudo apt install -y neovim git tmuxp fzf fasd vifm powerline ripgrep bat stow chafa thefuck console-terminus xfonts-terminus \
 fortune cowsay lolcat sl cmatrix &&
-# autoapply
-ls ~/.config/base16-shell/scripts/|rev|cut -d. -f2-|rev|grep -v \\-light|fzf --bind 'enter:execute(source ~/.config/base16-shell/scripts/{}.sh)' --height=10 --border
 
 # colors
 ln -s `which batcat` ~/.local/bin/bat
 git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell &&
-(
-cd ~/.config/base16-shell &&
-crazy="greenscreen heetch daarktooth grayscale-dark isotope outrun-dark icy grayscale-light "
-dark="chalk default-dark google-dark helios irblack material material-palenight monokai nord oceanicnext phd pop seti synth-midnight-dark tomorrow-night tube "
-light="github shapeshifter tomorrow google-light ia-light mexico-light one-light summerfruit-light "
-vimdiff="default-light heetch-light codesch darktooth flat github google-dark harmonic-dark helios horizon-dark macintosh pop xcode-dusk"
-(cd scripts/best/crazy && for s in $crazy; do ln -s ../../base16-$s.sh .;done) &&
-(cd scripts/best/light && for s in $light; do ln -s ../../base16-$s.sh .;done) &&
-(cd scripts/best/dark && for s in $dark; do ln -s ../../base16-$s.sh .;done)
-) &&
-tmp=`mktemp`
-(
-echo '# Best themes'
-for c in crazy light dark; do
-  tail -n7 ~/.config/base16-shell/profile_helper.sh|sed -e "s/scripts/scripts\/best\/$c/" -e "s/base16_/16$c-/"
-done
-) > $tmp
-cat $tmp >> ~/.config/base16-shell/profile_helper.sh
-(cat >>~/.rc<<END
-export MANPAGER="sh -c 'sed -e s/.\\\\x08//g | bat -l man -p'"
-export EDITOR=vi
-# Base16 Shell
-BASE16_SHELL="\$HOME/.config/base16-shell/"
-[ -n "\$PS1" ] && \\
-    [ -s "\$BASE16_SHELL/profile_helper.sh" ] && \\
-        eval "\$("\$BASE16_SHELL/profile_helper.sh")"
-END
-) &&
-# bash
-cat >> ~/.bashrc<<END
-if [ -f \$HOME/.rc ]; then
-  source \$HOME/.rc;
-fi
-END
+git clone https://github.com/nosovicki/dotfiles.git ~/.dotfiles &&
+cd ~/.dotfiles &&
+stow colors
 
 ```
 ## Neovim
@@ -63,7 +30,6 @@ nvim +UpdateRemotePlugins +qa
 ```sh
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm &&
 (cat >> ~/.tmux.conf<<END
-git clone https://github.com/nosovicki/dotfiles.git ~/.dotfiles &&
 cd ~/.dotfiles &&
 stow tmux
 ~/.tmux/plugins/tpm/bindings/install_plugins
