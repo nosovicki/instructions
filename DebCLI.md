@@ -10,7 +10,7 @@ ln -s `which batcat` ~/.local/bin/bat
 git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell &&
 git clone https://github.com/nosovicki/dotfiles.git ~/.dotfiles &&
 cd ~/.dotfiles &&
-stow colors
+stow -v color
 
 ```
 ## Neovim
