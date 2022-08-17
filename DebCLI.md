@@ -9,11 +9,11 @@ fortune cowsay lolcat sl cmatrix figlet sysvbanner toilet &&
 gsettings set org.gnome.desktop.interface monospace-font-name 'Terminus Medium 8'
 gconftool-2 --set /apps/gnome-terminal/profiles/Default/use_system_font --type=boolean false
 
-# colors
+# Color
 git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell &&
 git clone https://github.com/nosovicki/dotfiles.git ~/.dotfiles &&
 cd ~/.dotfiles &&
-stow -v color
+stow -v console
 ln -s `which batcat` ~/.local/bin/bat
 
 #bash
