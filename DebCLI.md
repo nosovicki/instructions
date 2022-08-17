@@ -3,7 +3,7 @@
 ## Общее
 ```sh
 sudo apt install -y neovim git tmux fzf fasd vifm powerline zsh ripgrep bat stow chafa thefuck console-terminus xfonts-terminus \
-fortune cowsay lolcat sl cmatrix &&
+fortune cowsay lolcat sl cmatrix figlet sysvbanner toilet &&
 
 # Font
 gsettings set org.gnome.desktop.interface monospace-font-name 'Terminus Medium 8'
