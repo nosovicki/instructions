@@ -2,8 +2,11 @@
 
 ## Общее
 ```sh
-sudo apt install -y neovim git tmux fzf fasd vifm powerline zsh ripgrep bat stow chafa thefuck console-terminus xfonts-terminus \
+sudo apt install -y gconf2 neovim git tmux fzf fasd vifm powerline zsh ripgrep bat stow chafa thefuck console-terminus xfonts-terminus \
 fortune cowsay lolcat sl cmatrix figlet sysvbanner toilet &&
+
+# Make cursor blink in gnome terminal
+gsettings list-recursively | grep 'cursor-blink false'|sed 's/false/true/'|xargs -n3 gsettings set
 
 # Font
 gsettings set org.gnome.desktop.interface monospace-font-name 'Terminus Medium 8'
