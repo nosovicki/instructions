@@ -17,7 +17,6 @@ git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shel
 git clone https://github.com/nosovicki/dotfiles.git ~/.dotfiles &&
 cd ~/.dotfiles &&
 stow -v console
-ln -s `which batcat` ~/.local/bin/bat
 
 #bash
 (test -f ~/.bashrc -a ! -L ~/.bashrc && mv -b ~/.bashrc ~/.bashrc.bak) &&
