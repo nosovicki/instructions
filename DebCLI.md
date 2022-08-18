@@ -27,8 +27,9 @@ stow -v bash
 ## Neovim
 ```sh
 # remove vim if installed
-apt autoremove vim
+apt autoremove -y vim
 # install init.vim
+cd ~/.dotfiles
 stow nvim
 # Download vim-plug
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
