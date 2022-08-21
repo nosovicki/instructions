@@ -14,12 +14,13 @@ git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shel
 git clone https://github.com/nosovicki/dotfiles.git ~/.dotfiles &&
 cd ~/.dotfiles &&
 stow -v console &&
-figlet -f small BASE 16|lolcat && echo Select your color scheme
+~/.local/bin/16 &&
 #bash
 (test -f ~/.bashrc -a ! -L ~/.bashrc && mv -b ~/.bashrc ~/.bashrc.bak) &&
 cd ~/.dotfiles &&
 stow -v bash
-echo -en 'Press Enter to re-load your X session\n> ' && 
+echo You need to relogin in order to load new bash configuration
+echo $TERM | grep -q 'xterm' && echo -en 'Press Enter to re-load your X session\n> ' && 
 read && cinnamon-session-quit --logout --force
 
 ```
@@ -28,14 +29,15 @@ read && cinnamon-session-quit --logout --force
 # remove vim if installed
 apt autoremove -y vim
 # install init.vim
-cd ~/.dotfiles
-stow nvim
+cd ~/.dotfiles &&
+stow nvim &&
 # Download vim-plug
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim' &&
 # Install plugins
-nvim --headless +PlugInstall +qa
-nvim +UpdateRemotePlugins +qa
+nvim --headless +PlugInstall +qa &&
+nvim +UpdateRemotePlugins +qa &&
+echo Success.
 
 ```
 
