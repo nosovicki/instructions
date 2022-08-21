@@ -2,11 +2,8 @@
 
 ## Общее
 ```sh
-sudo apt install -y gconf2 neovim git tmux fzf fasd vifm powerline zsh ripgrep bat stow chafa thefuck console-terminus xfonts-terminus \
-fortune cowsay lolcat sl cmatrix figlet sysvbanner toilet &&
-
-# Make cursor blink in gnome terminal
-gsettings list-recursively | grep 'cursor-blink false'|sed 's/false/true/'|xargs -n3 gsettings set
+sudo apt install -y gconf2 neovim git tmux fzf fasd vifm powerline zsh ripgrep bat stow chafa \
+thefuck console-terminus xfonts-terminus fortune cowsay lolcat sl cmatrix figlet sysvbanner toilet &&
 
 # Font
 gsettings set org.gnome.desktop.interface monospace-font-name 'Terminus Medium 8'
@@ -16,12 +13,14 @@ gconftool-2 --set /apps/gnome-terminal/profiles/Default/use_system_font --type=b
 git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell &&
 git clone https://github.com/nosovicki/dotfiles.git ~/.dotfiles &&
 cd ~/.dotfiles &&
-stow -v console
-
+stow -v console &&
+figlet -f small BASE 16|lolcat && echo Select your color scheme
 #bash
 (test -f ~/.bashrc -a ! -L ~/.bashrc && mv -b ~/.bashrc ~/.bashrc.bak) &&
 cd ~/.dotfiles &&
 stow -v bash
+echo -en 'Press Enter to re-load your X session\n> ' && 
+read && cinnamon-session-quit --logout --force
 
 ```
 ## Neovim
