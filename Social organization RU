@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-04-02T09:01:25.670Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36" etag="9zAa7HEF4e29K3le1MgM" version="20.8.3" type="github">
+<mxfile host="app.diagrams.net" modified="2023-04-02T09:04:52.606Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36" etag="tNANztnfcu-CIT5ry2EO" version="20.8.3" type="github">
   <diagram id="3228e29e-7158-1315-38df-8450db1d8a1d" name="Page-1">
-    <mxGraphModel dx="928" dy="745" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
+    <mxGraphModel dx="928" dy="718" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -31,7 +31,7 @@
         <mxCell id="21539" value="Государство-организм" style="text;align=center;html=1;fontColor=#000000;fontSize=16;" parent="1" vertex="1">
           <mxGeometry x="734" y="418.5" width="40" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="BYj-QOflcb-PHp7QNdiF-21539" value="&lt;h1&gt;Типы общественного устройства&lt;/h1&gt;&lt;p&gt;Характеристика общественного устройства не основе трех типов социального взаимодействия.&lt;/p&gt;&lt;p&gt;Необходимо принимать во внимание, что типы социального взаимодействия не исключают друг друга и потому любое общество может представляет из себя смесь из всех трех. Кроме того, одногодность ему могут придавать совершенно различные системы ценностей. Конкретные м&lt;span style=&quot;background-color: initial;&quot;&gt;етоды борьбы с девиантными проявлениями также не вполне зависят от типа общественного устройства. Тем не менее, типы социального взаимодействия в значительной мере раскрывают, на чем в&amp;nbsp; том или ином обществе основывается гармония и стабильность.&lt;/span&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+        <mxCell id="BYj-QOflcb-PHp7QNdiF-21539" value="&lt;h1&gt;Типы общественного устройства&lt;/h1&gt;&lt;p&gt;Характеристика общественного устройства не основе трех типов социального взаимодействия.&lt;/p&gt;&lt;p&gt;Необходимо принимать во внимание, что типы социального взаимодействия не исключают друг друга и потому любое общество может представляет из себя смесь из всех трех. Кроме того, одногодность ему могут придавать совершенно различные системы ценностей. Конкретные м&lt;span style=&quot;background-color: initial;&quot;&gt;етоды борьбы с девиантными проявлениями также не вполне зависят от типа общественного устройства. Несмотря на эти ограничения, типы социального взаимодействия раскрывают, на чем&amp;nbsp; основываются гармония и стабильность&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;того или иного общества.&lt;/span&gt;&lt;/p&gt;&lt;br&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="18" y="18.5" width="193" height="794.5" as="geometry" />
         </mxCell>
         <mxCell id="BYj-QOflcb-PHp7QNdiF-21541" value="Анархия" style="text;align=center;html=1;fontColor=#000000;fontSize=16;" parent="1" vertex="1">
