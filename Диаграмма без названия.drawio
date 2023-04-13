@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-04-13T21:55:01.589Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="x_L7pDBBde19bj6CvC_s" version="21.1.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-04-13T21:57:30.885Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36" etag="c99iTt8mXyaQoK0gVOSO" version="21.1.2" type="github">
   <diagram id="3228e29e-7158-1315-38df-8450db1d8a1d" name="Page-1">
     <mxGraphModel dx="1354" dy="894" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
       <root>
@@ -40,7 +40,7 @@
         <mxCell id="JMQzG4-AQKhtNmrJnzyl-21544" value="Sect,&lt;br&gt;Beehive" style="text;align=center;html=1;fontColor=#000000;fontSize=16;" parent="1" vertex="1">
           <mxGeometry x="610" y="710" width="40" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="JMQzG4-AQKhtNmrJnzyl-21545" value="&lt;h1&gt;Types of social organization&lt;/h1&gt;&lt;p&gt;Three common social interactions that define social fabric and&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;cause harmony in society.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Note that the types of social interaction are not mutually exclusive; therefore any society can be a mixture of all three. In addition, completely different value systems can cause uniformity. Methods of ensuring given interaction can also vary.&lt;/span&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=12;fontColor=#000000;" parent="1" vertex="1">
+        <mxCell id="JMQzG4-AQKhtNmrJnzyl-21545" value="&lt;h1&gt;Types of social organization&lt;/h1&gt;&lt;p&gt;Three common social interactions that define social fabric and&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;cause harmony in society.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Note that the types of social interaction are not mutually exclusive; therefore any society can be a mixture of all three. In addition, completely different value systems can cause uniformity. Methods of enforcing given society can also vary.&lt;/span&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontSize=12;fontColor=#000000;" parent="1" vertex="1">
           <mxGeometry x="30" y="30" width="190" height="690" as="geometry" />
         </mxCell>
       </root>
